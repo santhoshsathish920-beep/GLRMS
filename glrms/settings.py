@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whienoise.middleware.WhiteNoseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     
     # Custom Middleware
     'django_htmx.middleware.HtmxMiddleware',
