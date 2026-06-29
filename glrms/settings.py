@@ -168,8 +168,8 @@ except ImportError:
 GEE_KEY_PATH = config('GEE_KEY_PATH', default=str(BASE_DIR / 'gee_key.json'))
 
 # LOGGING CONFIGURATION
-LOG_DIR = BASE_DIR / 'logs'
-LOG_DIR.mkdir(exist_ok=True)
+# LOG_DIR = BASE_DIR / 'logs'
+# LOG_DIR.mkdir(exist_ok=True)
 
 LOGGING = {
     'version': 1,
@@ -190,34 +190,20 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose',
         },
-        'monitoring_file': {
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': str(LOG_DIR / 'monitoring.log'),
-            'maxBytes': 5 * 1024 * 1024,  # 5 MB
-            'backupCount': 5,
-            'formatter': 'verbose',
-        },
-        'django_file': {
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': str(LOG_DIR / 'django.log'),
-            'maxBytes': 5 * 1024 * 1024,
-            'backupCount': 3,
-            'formatter': 'verbose',
-        },
     },
     'loggers': {
         'django': {
-            'handlers': ['console', 'django_file'],
+            'handlers': ['console'],
             'level': 'WARNING',
             'propagate': True,
         },
         'glrms.monitoring': {
-            'handlers': ['console', 'monitoring_file'],
+            'handlers': ['console'],
             'level': 'INFO',
             'propagate': False,
         },
         'lands': {
-            'handlers': ['console', 'django_file'],
+            'handlers': ['console'],
             'level': 'INFO',
             'propagate': False,
         },
