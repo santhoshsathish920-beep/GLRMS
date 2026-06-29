@@ -26,3 +26,4 @@ redis==5.0.1
 django-celery-beat==2.5.0
 django-celery-results==2.5.1
 python-dotenv==1.0.0
+whitenoise==6.12.0
