@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
     {% endif %}
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/lands/css/custom.css">
+    <link rel="stylesheet" href="{% static 'lands/css/custom.css' %}">
 </head>
 <body class="bg-light">
     <!-- Top Navbar -->
